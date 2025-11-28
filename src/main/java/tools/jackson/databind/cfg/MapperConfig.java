@@ -382,6 +382,15 @@ public abstract class MapperConfig<T extends MapperConfig<T>>
         return result;
     }
 
+
+    /**
+     * Accessor for default radix to apply to integral types when serializing them as string.
+     * The radix obtained from this accessor should have the lowest precedence.
+     *
+     * @since 2.21
+     */
+    public abstract int getDefaultRadix();
+
     /**
      * Accessor for default format settings to use for serialization (and, to a degree
      * deserialization), considering baseline settings and per-type defaults
